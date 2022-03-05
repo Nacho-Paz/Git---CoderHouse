@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #e1eef0;
+  background-color: $colorFondo;
   font-family: "Poppins", sans-serif;
   position: relative;
   padding-bottom: 150px;
@@ -13,14 +13,14 @@ body {
 }
 
 .tittle1 {
-  color: #fff;
+  color: $colorBlanco;
   text-align: center;
   width: 100%;
 }
 
 .tittle2 {
   padding: 0 1rem;
-  color: #fff;
+  color: $colorBlanco;
   text-align: center;
 }
 

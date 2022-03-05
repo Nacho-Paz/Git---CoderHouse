@@ -19,7 +19,7 @@
   .encabezado__tittle {
     position: absolute;
     top: 120px;
-    color: #fff;
+    color: $colorBlanco;
     font-size: 3.5rem;
   }
 
@@ -39,13 +39,13 @@
 .cardG {
   display: flex;
   border-radius: 10px;
-  background-image: linear-gradient(315deg, #6f25ef 0%, #5ab4c4 100%);
+  @include degrade(315deg, $colorPrincipal 0%, $colorTerciario 100%);
   padding: 3%;
   width: 80%;
   max-width: 600px;
   flex-wrap: wrap;
-  color: #fff;
-  box-shadow: #000 0px 5px 15px;
+  color: $colorBlanco;
+  box-shadow: $colorNegro 0px 5px 15px;
 
   .tittle {
     width: 100%;
@@ -63,7 +63,7 @@
 }
 
 .cardG--Importancia {
-  background-image: linear-gradient(315deg, #5ab4c4 0%, #6f25ef 100%);
+  @include degrade(315deg, $colorTerciario 0%, $colorPrincipal 100%);
 }
 
 /*POPULARES*/
@@ -73,7 +73,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-image: linear-gradient(0deg, #5ab4c4 0%, #6f25ef 100%);
+  @include degrade(0deg, $colorTerciario 0%, $colorPrincipal 100%);
   height: 300px;
   position: relative;
   margin-bottom: 200px;
@@ -86,14 +86,14 @@
 }
 
 .card {
-  background-image: linear-gradient(135deg, #5ab4c4 13%, #7ddfcb 89%);
+  @include degrade(135deg, $colorTerciario 13%, $colorQuinto 89%);
   border-radius: 10px;
   padding: 1.5%;
   width: 80%;
   max-width: 600px;
   display: flex;
   gap: 10px;
-  box-shadow: #000 0px 5px 15px;
+  box-shadow: $colorNegro 0px 5px 15px;
   .card--division {
     width: 40%;
     display: flex;
@@ -101,13 +101,13 @@
     align-items: center;
     justify-content: center;
     .card_tittle {
-      color: #6f25ef;
+      color: $colorPrincipal;
       text-align: center;
       width: 100%;
     }
 
     .card_creation {
-      color: #fff;
+      color: $colorBlanco;
       font-style: italic;
       margin: 5px 0;
     }
@@ -125,18 +125,18 @@
 
 /*CONTACTANOS*/
 .form {
-  background-color: #09869d;
+  background-color: $colorSecundario;
   width: 90%;
   margin: auto;
   padding: 2%;
   max-width: 900px;
   border-radius: 15px;
-  box-shadow: #000 0px 5px 15px;
+  box-shadow: $colorNegro 0px 5px 15px;
   .form__tittle {
     justify-content: center;
     display: flex;
     margin: 1rem auto;
-    color: #fff;
+    color: $colorBlanco;
     width: 100%;
     font-size: 2.2rem;
     animation: upDown 2s infinite;
@@ -156,7 +156,7 @@
     margin: 15px auto;
     display: flex;
     width: 70%;
-    background-color: #fff;
+    background-color: $colorBlanco;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     .ingreso {
@@ -166,7 +166,7 @@
       width: 100%;
       outline: none;
       border: none;
-      border-bottom: #6f25ef 4px solid;
+      border-bottom: $colorPrincipal 4px solid;
       background-color: transparent;
       transition: all 0.3s;
     }
@@ -176,23 +176,23 @@
       font-size: 25px;
       width: 15px;
       padding: 4px 5px;
-      color: #6f25ef;
-      border-bottom: #6f25ef 4px solid;
+      color: $colorPrincipal;
+      border-bottom: $colorPrincipal 4px solid;
       transition: all 0.3s;
     }
     .ingreso:hover,
     .ingreso:focus {
-      border-bottom: #09869d 4px solid;
+      border-bottom: $colorSecundario 4px solid;
     }
 
     .ingreso:hover ~ .form__icon,
     .ingreso:focus ~ .form__icon {
-      border-bottom: #09869d 4px solid;
-      color: #09869d;
+      border-bottom: $colorSecundario 4px solid;
+      color: $colorSecundario;
     }
   }
   .checkbox {
-    color: #fff;
+    color: $colorBlanco;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -204,32 +204,32 @@
 
   .btn {
     padding: 2%;
-    background-color: #6f25ef;
-    color: #5ab4c4;
+    background-color: $colorPrincipal;
+    color: $colorTerciario;
     font-weight: bold;
     border-radius: 10px;
-    border: #6f25ef 3px solid;
+    border: $colorPrincipal 3px solid;
     transition: all 0.4s;
-    box-shadow: #000 0px 0px 5px;
+    box-shadow: $colorNegro 0px 0px 5px;
   }
 
   .btn:hover,
   .btn:focus {
     transform: translateY(-10px);
     background-color: transparent;
-    border: #6f25ef 3px solid;
-    color: #6f25ef;
+    border: $colorPrincipal 3px solid;
+    color: $colorPrincipal;
   }
 }
 
 /*NUESTROS JUEGOS*/
 
 .table--container {
-  background-color: #5ab4c4;
+  background-color: $colorTerciario;
   width: 85%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  box-shadow: #000 0px 5px 15px;
+  box-shadow: $colorNegro 0px 5px 15px;
   .table--item,
   .table--header {
     display: flex;
@@ -239,17 +239,17 @@
 
   .table--item {
     padding-left: 10px;
-    border: #000 solid 1px;
+    border: $colorNegro solid 1px;
     font-size: 15px;
   }
 
   .table--header {
-    background-color: #6f25ef;
+    background-color: $colorPrincipal;
     width: 100%;
     font-weight: bold;
     height: 50px;
     font-size: 17px;
-    border-bottom: #000 solid 3px;
-    color: #5ab4c4;
+    border-bottom: $colorNegro solid 3px;
+    color: $colorTerciario;
   }
 }
